@@ -100,7 +100,7 @@ function listenToTokens() {
 }
 
 function updateSavannaPosition(tokenData) {
-  const savannaSVG = queryselector;
+  const savannaSVG = queryselector(#ForestBubble);
   savannaSVG.style.top = `calc(${tokenData.relativeY * 100}%)`;
   savannaSVG.style.left = `calc(${tokenData.relativeX * 100}%)`;
 }
@@ -115,15 +115,15 @@ function updateSavannaPosition(tokenData) {
 
 function checkProximity(tokenData) {
   if (!savannaIsFollowing) {
-    const tokenPositionX = tokenData.relativeX * 100;
-    const tokenPositionY = tokenData.relativeY * 100;
+    let tokenPositionX = tokenData.relativeX * 100;
+    let tokenPositionY = tokenData.relativeY * 100;
 
     console.log("tokenPositionX", tokenPositionX);
     console.log("tokenPositionY", tokenPositionY);
 
     // check distance to savanna blob
-    const savannaX = 50;
-    const savannaY = 50;
+    let savannaX = 50;
+    let savannaY = 50;
 
     if (savannaX < tokenPositionX) {
       // Math.abs

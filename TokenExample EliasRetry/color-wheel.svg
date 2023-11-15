@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 387.52 387.52"><defs><style>.cls-1{fill:none;}.cls-2{fill:url(#New_Gradient_Swatch);}.cls-3{fill:url(#New_Gradient_Swatch_copy_2);}.cls-4{fill:url(#New_Gradient_Swatch_copy_3);}.cls-5{fill:url(#radial-gradient);}.cls-6{fill:url(#New_Gradient_Swatch_copy);stroke:#e2b698;stroke-miterlimit:10;}</style><radialGradient id="New_Gradient_Swatch" cx="195.11" cy="196.09" fx="195.11" fy="196.09" r="187.51" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#33464c"/>
+<stop offset="1" stop-color="#33344c"/>
+</radialGradient><radialGradient id="New_Gradient_Swatch_copy_3" cx="190.88" cy="196.09" fx="190.88" fy="196.09" r="187.73" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ea5454"/>
+<stop offset="1" stop-color="#e6473a"/>
+</radialGradient><radialGradient id="New_Gradient_Swatch_copy_2" cx="190.88" cy="192.7" fx="12.77" fy="123.13" r="191.21" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a9c4a8"/>
+<stop offset="1" stop-color="#89c4a8"/>
+</radialGradient><radialGradient id="New_Gradient_Swatch_copy" cx="194.26" cy="191.01" fx="194.26" fy="191.01" r="193.54" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fed7b8"/>
+<stop offset="1" stop-color="#e2b698"/>
+</radialGradient><radialGradient id="radial-gradient" cx="192.73" cy="194.2" fx="192.73" fy="194.2" r="83.33" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#43444c"/>
+<stop offset="1" stop-color="#2f3236"/>
+</radialGradient></defs><path class="cls-2" d="m193.51,194.01v193.51c106.87,0,193.51-86.64,193.51-193.51h-193.51Z"/>
+<path class="cls-4" d="m0,194.01c0,106.87,86.64,193.51,193.51,193.51v-193.51H0Z"/>
+<path class="cls-3" d="m0,194.01h193.51V.5C86.64.5,0,87.14,0,194.01Z"/>
+<path class="cls-6" d="m193.51.5v193.51h193.51C387.02,87.14,300.38.5,193.51.5Z"/>
+<path class="cls-5" d="m214.18,117.59l-9.54-28.91-11.13-33.74-11.13,33.74-9.54,28.91c-33.7,9.09-58.5,39.85-58.5,76.42,0,43.72,35.44,79.16,79.16,79.16s79.16-35.44,79.16-79.16c0-36.57-24.8-67.33-58.5-76.42Z"/>
+<g id="empty"><polygon class="cls-1" points="193.51 265.6 171.25 265.6 182.38 299.34 193.51 333.08 204.64 299.34 215.77 265.6 193.51 265.6"/>
+<polygon class="cls-1" points="121.92 194.01 121.92 216.27 88.18 205.14 54.44 194.01 88.18 182.88 121.92 171.75 121.92 194.01"/>
+<polygon class="cls-1" points="265.1 194.01 265.1 216.27 298.84 205.14 332.58 194.01 298.84 182.88 265.1 171.75 265.1 194.01"/>
+</g></svg>

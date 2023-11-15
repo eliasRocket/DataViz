@@ -29,8 +29,8 @@ body {
 }
 
 #ForrestBubble {
-  top: 100px; /* Déplace l'image vers le bas de 100 pixels */
-  left: 50px; /* Déplace l'image vers la droite de 50 pixels */
+  top: 50%; /* Déplace l'image vers le bas de 100 pixels */
+  left: 50%; /* Déplace l'image vers la droite de 50 pixels */
 }
 
 #background {

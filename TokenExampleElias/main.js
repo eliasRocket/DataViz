@@ -1,9 +1,11 @@
 const colorWheel = document.querySelector(".color-wheel");
 const background = document.querySelector("#background");
-
-
-
-
+let savannaIsFollowing = false;
+const myBiomes = [
+  { name: "Forrest", initialX: 10, initialY: 10, isFollowing: false },
+  { name: "Ocean", initialX: 30, initialY: 30, isFollowing: false },
+  { name: "Shrublands", initialX: 50, initialY: 70, isFollowing: false },
+];
 
 function updateColorWheel(tokenData) {
   // select the inner wheel to adjust the rotation
@@ -31,8 +33,6 @@ function updateColorWheel(tokenData) {
 
   colorWheel.style.top = `calc(${yPosPercentage}% - ${wheelSize / 2}px)`;
   colorWheel.style.left = `calc(${xPosPercentage}% - ${wheelSize / 2}px)`;
- 
-  
 }
 
 function addColorWheel(tokenData) {
@@ -57,7 +57,6 @@ function udpateBackground(tokenData) {
 }
 
 function listenToTokens() {
-  console.log(`colorWheel.style.top testestest: `, colorWheel.style.top);
   const server = `ws://localhost:6050`;
   const ws = new WebSocket(server);
 
@@ -86,12 +85,58 @@ function listenToTokens() {
     if (json?.type === "/tracker/add") {
       addColorWheel(data);
     } else if (json?.type === "/tracker/update") {
+      console.log("data", data);
       updateColorWheel(data);
       udpateBackground(data);
+      checkProximity(data);
+
+      if (savannaIsFollowing) {
+        updateSavannaPosition(data);
+      }
+
+      // updateBiomePosition(data)
     }
   };
 }
 
-function checkProximity()
+function updateSavannaPosition(tokenData) {
+  const savannaSVG = queryselector;
+  savannaSVG.style.top = `calc(${tokenData.relativeY * 100}%)`;
+  savannaSVG.style.left = `calc(${tokenData.relativeX * 100}%)`;
+}
+
+// function updateBiomePosition(tokenData) {
+//   myBiomes.forEach((biome) => {
+//     const biomeDomItem = document.querySelector(`.${biome.name}`);
+//     biomeDomItem.style.top = `calc(${tokenData.relativeY * 100}%)`;
+//     biomeDomItem.style.left = `calc(${tokenData.relativeX * 100}%)`;
+//   });
+// }
+
+function checkProximity(tokenData) {
+  if (!savannaIsFollowing) {
+    const tokenPositionX = tokenData.relativeX * 100;
+    const tokenPositionY = tokenData.relativeY * 100;
+
+    console.log("tokenPositionX", tokenPositionX);
+    console.log("tokenPositionY", tokenPositionY);
+
+    // check distance to savanna blob
+    const savannaX = 50;
+    const savannaY = 50;
+
+    if (savannaX < tokenPositionX) {
+      // Math.abs
+      savannaIsFollowing = true;
+    }
+  }
+
+  // loop through biomes and check proximity for each
+  // myBiomes.forEach((biome) => {
+  //   if (biome.initialX < tokenPositionX) {
+  //     biome.isFollowing = true;
+  //   }
+  // });
+}
 
 listenToTokens();

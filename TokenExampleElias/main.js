@@ -1,6 +1,6 @@
 const colorWheel = document.querySelector(".color-wheel");
 const background = document.querySelector("#background");
-let savannaIsFollowing = false;
+var savannaIsFollowing = false;
 const myBiomes = [
   { name: "Forrest", initialX: 10, initialY: 10, isFollowing: false },
   { name: "Ocean", initialX: 30, initialY: 30, isFollowing: false },
@@ -100,7 +100,7 @@ function listenToTokens() {
 }
 
 function updateSavannaPosition(tokenData) {
-  const savannaSVG = document.querySelector("#ForrestBubble");
+  var savannaSVG = document.querySelector("#ForrestBubble");
   savannaSVG.style.top = `calc(${tokenData.relativeY * 100}%)`;
   savannaSVG.style.left = `calc(${tokenData.relativeX * 100}%)`;
 }

@@ -100,7 +100,7 @@ function listenToTokens() {
 }
 
 function updateSavannaPosition(tokenData) {
-  const savannaSVG = queryselector(#ForestBubble);
+  const savannaSVG = document.querySelector("#ForrestBubble");
   savannaSVG.style.top = `calc(${tokenData.relativeY * 100}%)`;
   savannaSVG.style.left = `calc(${tokenData.relativeX * 100}%)`;
 }

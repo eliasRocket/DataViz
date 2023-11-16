@@ -122,8 +122,8 @@ function checkProximity(tokenData) {
     console.log("tokenPositionY", tokenPositionY);
 
     // check distance to savanna blob
-    let savannaX = 50;
-    let savannaY = 50;
+    let savannaX = 40;
+    let savannaY = 40;
 
     if (savannaX < tokenPositionX) {
       // Math.abs

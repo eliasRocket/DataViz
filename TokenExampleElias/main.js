@@ -1,9 +1,11 @@
 const colorWheel = document.querySelector(".color-wheel");
 const background = document.querySelector("#background");
 var savannaIsFollowing = false;
+var shrublandIsFollowing = false;
+
 const myBiomes = [
   { name: "Forrest", initialX: 10, initialY: 10, isFollowing: false },
-  { name: "Ocean", initialX: 30, initialY: 30, isFollowing: false },
+  { name: "Savanna", initialX: 30, initialY: 30, isFollowing: false },
   { name: "Shrublands", initialX: 50, initialY: 70, isFollowing: false },
 ];
 
@@ -94,6 +96,9 @@ function listenToTokens() {
         updateSavannaPosition(data);
       }
 
+      if (shrublandIsFollowing) {
+        updateShrublandPosition(date);
+      }
       // updateBiomePosition(data)
     }
   };
@@ -103,6 +108,12 @@ function updateSavannaPosition(tokenData) {
   var savannaSVG = document.querySelector("#ForrestBubble");
   savannaSVG.style.top = `calc(${tokenData.relativeY * 100}%)`;
   savannaSVG.style.left = `calc(${tokenData.relativeX * 100}%)`;
+}
+
+function updateShrublandPosition(tokenData) {
+  var shrublandSVG = document.querySelector("#Biom-Shrubland");
+  shrublandSVG.style.top = `calc(${tokenData.relativeY * 100}%)`;
+  shrublandSVG.style.left = `calc(${tokenData.relativeX * 100}%)`;
 }
 
 // function updateBiomePosition(tokenData) {
@@ -122,14 +133,16 @@ function checkProximity(tokenData) {
     console.log("tokenPositionY", tokenPositionY);
 
     // check distance to savanna blob
-    let savannaX = 40;
-    let savannaY = 40;
+    let savannaX = 50;
+    let savannaY = 50;
 
     if (savannaX < tokenPositionX) {
       // Math.abs
       savannaIsFollowing = true;
     }
   }
+
+  
 
   // loop through biomes and check proximity for each
   // myBiomes.forEach((biome) => {

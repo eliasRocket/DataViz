@@ -32,7 +32,10 @@ body {
   top: 50%; /* Déplace l'image vers le bas de 100 pixels */
   left: 50%; /* Déplace l'image vers la droite de 50 pixels */
 }
-
+#Biom-Shrubland {
+  top: 50%; /* Déplace l'image vers le bas de 100 pixels */
+  left: 50%; /* Déplace l'image vers la droite de 50 pixels */
+}
 #background {
   height: 100vh;
   width: 100vw;

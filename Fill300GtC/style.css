@@ -1,0 +1,60 @@
+:root {
+  --color-wheel-size: 200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.color-wheel {
+  width: var(--color-wheel-size);
+  height: var(--color-wheel-size);
+  display: none;
+  position: absolute;
+  transition: all 0.1s;
+}
+
+.color-wheel.is-visible {
+  display: block;
+}
+
+.BiomBubble {
+  position: relative;
+}
+
+#ForrestBubble {
+  top: 50%; /* Déplace l'image vers le bas de 100 pixels */
+  left: 50%; /* Déplace l'image vers la droite de 50 pixels */
+}
+#Biom-Shrubland {
+  top: 50%; /* Déplace l'image vers le bas de 100 pixels */
+  left: 50%; /* Déplace l'image vers la droite de 50 pixels */
+}
+#background {
+  height: 100vh;
+  width: 100vw;
+  background-color: grey;
+  transition: background-color 0.4s;
+}
+
+#background.is-yellow {
+  background-color: #ebd2a2;
+}
+
+#background.is-blue {
+  background-color: #333d7b;
+}
+
+#background.is-red {
+  background-color: #d21e23;
+}
+
+#background.is-green {
+  background-color: #5db196;
+}
